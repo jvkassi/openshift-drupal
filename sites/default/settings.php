@@ -714,3 +714,13 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
 # if (file_exists(__DIR__ . '/settings.local.php')) {
 #   include __DIR__ . '/settings.local.php';
 # }
+$databases['default']['default'] = array (
+  'database' => getenv("MYSQL_DATABASE"),
+  'username' => getenv("MYSQL_USER"),
+  'password' => getenv("MYSQL_PASSWORD"),
+  'prefix' => '',
+  'host' => getenv("MYSQL_SERVICE_HOST"),
+  'port' => getenv("MYSQL_SERVICE_PORT"),
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
